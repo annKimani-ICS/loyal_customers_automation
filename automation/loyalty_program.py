@@ -9,4 +9,5 @@ df = pd.read_csv(r'C:\Users\Ann Wangari\Desktop\Safcom_Projects\automation\custo
 segmented_df = segment_customers(df)
 
 #save segmented data to a new file
-segmented_df.to_excel('data/segmented_customers.xlsx', index=False)
+df.to_excel('customer_segregation.xlsx', index=False)
+
