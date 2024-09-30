@@ -3,9 +3,11 @@ from typing import Any
 import pandas as pd
 from pandas import Series, DataFrame
 
-from loyalty_program import df
 
 import pandas as pd
+
+#Reading the dataset
+df = pd.read_csv(r'C:\Users\Ann Wangari\Desktop\Safcom_Projects\automation\customer_data.csv')
 
 def filter_customers(df):
     # Filter customers with loyalty_score > 6.5 and age between 27 and 35
@@ -17,4 +19,5 @@ file_path = r'C:\Users\Ann Wangari\Desktop\Safcom_Projects\automation\data\filte
 def save_filtered_customers(filtered_df, file_path):
     # Save the filtered customers to an Excel or CSV file
     filtered_df.to_excel(file_path, index=False)
+    return save_filtered_customers
 

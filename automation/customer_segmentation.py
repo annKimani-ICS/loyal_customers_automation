@@ -1,9 +1,12 @@
 #this file contains logic for classifying customers into high,medium and low segments
 #usinf customer_csv file.
+
+import pandas as pd
+
 from sympy import false
 
-from automation.loyalty_program import df
-
+#Reading the dataset
+df = pd.read_csv(r'C:\Users\Ann Wangari\Desktop\Safcom_Projects\automation\customer_data.csv')
 
 def segment_customers(row):
     if row['annual_income'] > 60000 and row['loyalty_score'] > 6.5 and row['purchase_frequency'] > 23.5:
